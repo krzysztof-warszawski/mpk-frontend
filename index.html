@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script src="includes/head.js"></script>
-  <script src="js/DataFetcher.js"></script>
+  <script  src="includes/head.js"></script>
+  <script defer src="js/projects/getProjects.js"></script>
 </head>
 <body>
   <div class="container mt-4">
@@ -10,7 +10,7 @@
         <a href="index.html" class="btn btn-primary">Lista Projektów</a>
         <a href="index.html" class="btn btn-secondary">Nowy MPK</a>
         <a href="index.html" class="btn btn-secondary">Pobierz listę projektów</a>
-        <a href="projects/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń projekt</a>
+        <a href="html/projects/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń projekt</a>
         <a href="index.html" class="btn btn-secondary">Edytuj/Usuń budynek</a>
     </div>
     <hr>
@@ -29,14 +29,11 @@
         </tr>
         </thead>
 
-        <tbody id="projects-list">      
-          <script type="text/javascript">DataFetcher.getProjects();</script>
-        </tbody>
+        <tbody id="projects-list"></tbody>
 
     </table>
     <br>
     <p><a href="index.html">Lista Projektów</a></p>
 </div>
-
 </body>
 </html>
