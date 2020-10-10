@@ -1,0 +1,1 @@
+const SERVER_NAME = 'http://localhost/app/api';
