@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="../../includes/head.js"></script>
+  <script defer src="../../js/projects/get-by-building.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="text-center">
+      <div class="btn-group" role="group">
+          <a href="../../index.html" class="btn btn-secondary">Lista Projektów</a>
+          <a href="../buildings/projects.html" class="btn btn-primary">Nowy MPK</a>
+          <a href="#" class="btn btn-secondary">Pobierz listę projektów</a>
+          <a href="edit-delete.html" class="btn btn-secondary">Edytuj/Usuń projekt</a>
+          <a href="../buildings/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń budynek</a>
+      </div>
+    </div>
+
+      <div class="col-md-8 mb-3 mx-auto">
+          <hr class="mb-4 mt-4">
+          <button class="btn btn-primary  btn-sm btn-block" >Generuj MPK dla nowego projektu</button>
+          <hr class="mb-4 mt-4">
+
+      </div>
+      <h3 id="building-name"></h3>
+    <table class="table table-striped ">
+        <thead>
+        <tr>
+            <th>ID Projektu</th>
+            <th>Data</th>
+            <th>Piętra</th>
+            <th>MPK</th>
+            <th>Projekt</th>
+            <th>Opis</th>
+            <th>Najemca</th>
+            <th>Usługa</th>
+        </tr>
+        </thead>
+
+        <tbody id="projects-list"></tbody>
+
+    </table>
+    <br>
+    <p><a href="../../index.html">Lista Projektów</a></p>
+</div>
+
+  <script src="../../includes/footer.js"></script>
+</body>
+</html>
