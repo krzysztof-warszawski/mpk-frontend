@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="../../includes/head.js"></script>
+  <script defer src="../../js/buildings/get-all.js"></script>
+</head>
+
+<body>
+  <div class="container mt-4 text-center">
+    <div class="btn-group" role="group">
+      <a href="../../index.html" class="btn btn-secondary">Lista Projektów</a>
+      <a href="../buildings/projects.html" class="btn btn-primary">Nowy MPK</a>
+      <a href="#" class="btn btn-secondary">Pobierz listę projektów</a>
+      <a href="../projects/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń projekt</a>
+      <a href="../buildings/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń budynek</a>
+    </div>
+    <hr>
+    <h3>Nowy projekt</h3>
+
+
+    <div class="text-center">
+      <hr class="mb-4">
+
+      <div class="col-md-7 order-md-1 mx-auto">
+        <form action="#" method="post" class="needs-validation" novalidate>
+
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="serviceType">Typ usługi</label>
+            <input type="text" class="form-control" id="serviceType">
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="tenant">Najemca</label>
+            <input type="text" class="form-control" id="tenant">
+            <div class="invalid-feedback">
+              Nie podano najemcy.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="date">Data</label>
+            <input type="text" class="form-control" id="date" required>
+            <div class="invalid-feedback">
+              Nie wprowadzono daty.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="floor">Piętro</label>
+            <input type="text" class="form-control" id="floor">
+            <div class="invalid-feedback">
+              Nie podano piętra budynku.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="shortDescription">Krótki opis</label>
+            <input type="text" class="form-control" id="shortDescription" required>
+            <div class="invalid-feedback">
+              Nie wrowadzono opisu.
+            </div>
+          </div>
+
+          <hr class="mb-4">
+          <div class="col-md-4 mb-3 mx-auto">
+            <button class="btn btn-primary  btn-sm btn-block mt-4" type="submit">Zapisz</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <br>
+    <p><a href="../../index.html">Lista Projektów</a></p>
+</div>
+
+  <script src="../../js/validation.js"></script>
+  <script src="../../includes/footer.js"></script>
+</body>
+</html>
