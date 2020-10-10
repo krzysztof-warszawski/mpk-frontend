@@ -1,4 +1,4 @@
-fetch('http://localhost/app/api/projects/186')
+fetch(`${SERVER_NAME}/projects/186`)
 .then((res) => res.json())
 .then((project) => {
 

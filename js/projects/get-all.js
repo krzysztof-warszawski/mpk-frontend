@@ -1,9 +1,8 @@
-fetch('http://localhost/app/api/projects')
+fetch(`${SERVER_NAME}/projects`)
 .then((res) => res.json())
 .then((data) => {
   
   let output = '';
-
     data.forEach(project => {
     output += `
     <tr>

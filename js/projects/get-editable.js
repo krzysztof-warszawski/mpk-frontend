@@ -1,4 +1,4 @@
-fetch('http://localhost/app/api/projects')
+fetch(`${SERVER_NAME}/projects`)
     .then((res) => res.json())
     .then((data) => {
       
@@ -27,7 +27,7 @@ fetch('http://localhost/app/api/projects')
   
 
   function deleteProject(id) {
-    fetch('http://localhost/app/api/projects/' + id, {
+    fetch(`${SERVER_NAME}/projects/${id}`, {
       method: 'DELETE'
     }).catch(err => {
       console.log(err);
