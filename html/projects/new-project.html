@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <script src="../../includes/head.js"></script>
-  <script defer src="../../js/buildings/get-all.js"></script>
+  <script defer src="../../js/utils/get-service-type.js"></script>
+  <script defer src="../../js/utils/get-date.js"></script>
 </head>
 
 <body>
@@ -22,11 +23,11 @@
       <hr class="mb-4">
 
       <div class="col-md-7 order-md-1 mx-auto">
-        <form action="#" method="post" class="needs-validation" novalidate>
+        <form action="../../index.html" method="post" class="needs-validation" id="save" novalidate>
 
           <div class="col-md-8 mb-3 text-left mx-auto">
-            <label for="serviceType">Typ usługi</label>
-            <input type="text" class="form-control" id="serviceType">
+            <label for="service-type">Typ usługi</label>
+            <select class="custom-select d-block w-100 form-control" id="service-type" name="id"></select>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="tenant">Najemca</label>
@@ -37,9 +38,10 @@
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="date">Data</label>
-            <input type="text" class="form-control" id="date" required>
+            <input type="number" class="form-control" maxlength="6" id="date"
+                   min="200001" max="204012" required>
             <div class="invalid-feedback">
-              Nie wprowadzono daty.
+              Niepoprawna data.
             </div>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
@@ -50,8 +52,8 @@
             </div>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
-            <label for="shortDescription">Krótki opis</label>
-            <input type="text" class="form-control" id="shortDescription" required>
+            <label for="short-description">Krótki opis</label>
+            <input type="text" class="form-control" id="short-description" required>
             <div class="invalid-feedback">
               Nie wrowadzono opisu.
             </div>
@@ -71,7 +73,7 @@
     <p><a href="../../index.html">Lista Projektów</a></p>
 </div>
 
-  <script src="../../js/validation.js"></script>
+  <script src="../../js/projects/validate-and-save.js"></script>
   <script src="../../includes/footer.js"></script>
 </body>
 </html>
