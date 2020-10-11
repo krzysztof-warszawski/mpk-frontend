@@ -1,6 +1,6 @@
 let query = window.location.search;
 let urlParam = new URLSearchParams(query);
-let buildingId = urlParam.get('id');
+const buildingId = urlParam.get('id');
 
 const url = `${SERVER_NAME}/buildings/${buildingId}/projects`
 
@@ -30,3 +30,5 @@ fetch(url)
 
 const buildingName = sessionStorage.getItem("buildingName");
 document.querySelector('#building-name').textContent = `Projekty Budynku ${buildingName}`;
+
+sessionStorage.setItem("buildingId", buildingId);
