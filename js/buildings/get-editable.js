@@ -1,4 +1,4 @@
-fetch(`${SERVER_NAME}/buildings`)
+fetch(`${SERVER_NAME}/buildings/offer`)
     .then((res) => res.json())
     .then((data) => {
       
