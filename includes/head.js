@@ -10,7 +10,7 @@ document.write(`
 
     <link rel="stylesheet" href="../../css/style.css"/>
     
-    <script defer src="../../js/globals.js"></script>
+    <script defer src="../../js/utils/globals.js"></script>
     
     <title>MPK</title>
 
