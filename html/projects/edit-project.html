@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="../../includes/head.js"></script>
+<!--  <script defer src="../../js/utils/get-service-type.js"></script>-->
+<!--  <script defer src="../../js/utils/get-date.js"></script>-->
+</head>
+
+<body>
+  <div class="container mt-4 text-center">
+    <div class="btn-group" role="group">
+      <a href="../../index.html" class="btn btn-secondary">Lista Projektów</a>
+      <a href="../buildings/projects.html" class="btn btn-secondary">Nowy MPK</a>
+      <a href="#" class="btn btn-secondary">Pobierz listę projektów</a>
+      <a href="../projects/edit-delete.html" class="btn btn-primary">Edytuj/Usuń projekt</a>
+      <a href="../buildings/edit-delete.html" class="btn btn-secondary">Edytuj/Usuń budynek</a>
+    </div>
+    <hr>
+    <h3>Edytuj projekt</h3>
+
+
+    <div class="text-center">
+      <hr class="mb-4">
+
+      <div class="col-md-7 order-md-1 mx-auto">
+        <form action="../../index.html" method="post" class="needs-validation" id="save" novalidate>
+
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="service-type">Typ usługi</label>
+            <select class="custom-select d-block w-100 form-control" id="service-type" name="id"></select>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="tenant">Najemca</label>
+            <input type="text" class="form-control" id="tenant">
+            <div class="invalid-feedback">
+              Nie podano najemcy.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="date">Data</label>
+            <input type="number" class="form-control" maxlength="6" id="date"
+                   min="200001" max="204012" required>
+            <div class="invalid-feedback">
+              Niepoprawna data.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="floor">Piętro</label>
+            <input type="text" class="form-control" id="floor">
+            <div class="invalid-feedback">
+              Nie podano piętra budynku.
+            </div>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="short-description">Krótki opis</label>
+            <input type="text" class="form-control" id="short-description" required>
+            <div class="invalid-feedback">
+              Nie wrowadzono opisu.
+            </div>
+          </div>
+
+          <hr class="mb-4">
+          <div class="col-md-4 mb-3 mx-auto">
+            <button class="btn btn-primary  btn-sm btn-block mt-4" type="submit">Zapisz</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <br>
+    <p><a href="../../index.html">Lista Projektów</a></p>
+</div>
+
+<!--  <script src="../../js/projects/validate-and-save.js"></script>-->
+  <script src="../../includes/footer.js"></script>
+</body>
+</html>
