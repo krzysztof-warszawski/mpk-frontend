@@ -26,8 +26,20 @@
         <form action="../../index.html" method="post" class="needs-validation" id="save" novalidate>
 
           <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="mpk">MPK</label>
+            <input type="text" class="form-control" id="mpk" readonly>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="project">Projekt</label>
+            <input type="text" class="form-control" id="project" readonly>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
+            <label for="buildings">Budynek</label>
+            <select class="custom-select d-block w-100 form-control" id="buildings" name="building-id"></select>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="service-type">Typ usługi</label>
-            <select class="custom-select d-block w-100 form-control" id="service-type" name="id"></select>
+            <select class="custom-select d-block w-100 form-control" id="service-type" name="service-type-id"></select>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="tenant">Najemca</label>
