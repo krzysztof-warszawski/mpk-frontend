@@ -1,20 +1,24 @@
-fetch(`${SERVER_NAME}/projects/186`)
+let query = window.location.search;
+let urlParam = new URLSearchParams(query);
+const projectId = urlParam.get('id');
+
+const url = `${SERVER_NAME}/projects/${projectId}`
+
+fetch(url)
 .then((res) => res.json())
 .then((project) => {
 
-    let output = `
-    <tr>
-      <td>${project.id}</td>
-      <td>${project.building_name}</td>
-      <td>${project.date}</td>
-      <td>${project.floor}</td>
-      <td>${project.mpk}</td>
-      <td>${project.project_num}</td>
-      <td>${project.short_description}</td>
-      <td>${project.tenant}</td>
-      <td>${project.service}</td>
-    </tr>
-    `;
-  
-  document.querySelector('#projects-list').innerHTML = output;
+    const form = document.querySelector('.needs-validation')
+    let formElements = form.elements;
+
+    formElements['id'].value = projectId;
+    formElements['mpk'].value = project.mpk;
+    formElements['project'].value = project.project_num;
+    formElements['building-id'].value = project.building_id;
+    formElements['service-type'].value = project.service_type_id;
+    formElements['tenant'].value = project.tenant;
+    formElements['date'].value = project.date;
+    formElements['floor'].value = project.floor;
+    formElements['short-description'].value = project.short_description;
+
 });

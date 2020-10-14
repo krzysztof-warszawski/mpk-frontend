@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <script src="../../includes/head.js"></script>
-<!--  <script defer src="../../js/utils/get-service-type.js"></script>-->
-<!--  <script defer src="../../js/utils/get-date.js"></script>-->
+  <script defer src="../../js/utils/get-service-type.js"></script>
+  <script defer src="../../js/buildings/get-all.js"></script>
+  <script defer src="../../js/projects/get-one.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,9 @@
         <form action="../../index.html" method="post" class="needs-validation" id="save" novalidate>
 
           <div class="col-md-8 mb-3 text-left mx-auto">
+            <input type="hidden" class="form-control" id="id" readonly>
+          </div>
+          <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="mpk">MPK</label>
             <input type="text" class="form-control" id="mpk" readonly>
           </div>
@@ -35,11 +39,11 @@
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="buildings">Budynek</label>
-            <select class="custom-select d-block w-100 form-control" id="buildings" name="building-id"></select>
+            <select class="custom-select d-block w-100 form-control" id="buildings" name="building-id" required></select>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="service-type">Typ usługi</label>
-            <select class="custom-select d-block w-100 form-control" id="service-type" name="service-type-id"></select>
+            <select class="custom-select d-block w-100 form-control" id="service-type"></select>
           </div>
           <div class="col-md-8 mb-3 text-left mx-auto">
             <label for="tenant">Najemca</label>
@@ -85,7 +89,7 @@
     <p><a href="../../index.html">Lista Projektów</a></p>
 </div>
 
-<!--  <script src="../../js/projects/validate-and-save.js"></script>-->
+  <script src="../../js/projects/validate-and-save.js"></script>
   <script src="../../includes/footer.js"></script>
 </body>
 </html>
