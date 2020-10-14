@@ -4,7 +4,10 @@ fetch(`${SERVER_NAME}/service`)
 
         let output = '';
 
-        data = data.slice(1, 6);
+        if (document.querySelector('#id') === null) {
+            data = data.slice(1, 6);
+        }
+
         data.forEach(service => {
             output += `
             <option value="${service.id}">${service.name}</option>
